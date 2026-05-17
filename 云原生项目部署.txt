@@ -1,0 +1,23 @@
+ Java 项目 → 打包成 Docker 镜像 → 扔到 K8s 里运行 	
+ 
+ Docker
+ 
+ Rancher Desktop（免费、一键 Docker+K8s）
+ 
+Spring Boot 项目（能运行、有接口）	
+
+GraalVM(JDK21) + Spring Boot 3 + Minikube(本地K8S) + Ollama(本地大模型) + 向量数据库
+
+一、 核心基础运行环境
+二、 Java 开发与编译环境
+	 多模块单体
+	1. saas-auth-gateway（网关与用户认证微服务）	 
+	2. saas-charging-service（核心收费与电桩控制微服务）
+	3. saas-customer-service（客户服务微服务）
+	4. saas-ai-agent-service（AI大模型微服务）
+		职责：大模型对话编排（Spring AI / LangChain4j）、多租户 RAG 知识库检索（电桩维修手册/充电常见问题）、Tool Calling（工具调用）分发、AI 自动派单。
+		
+	
+三、 本地 AI 与数据基础设施	
+监控与可观测性环境
+

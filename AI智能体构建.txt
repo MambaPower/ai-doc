@@ -1,0 +1,39 @@
+1、如何建立一个本地的python项目
+	一、创建项目文件夹
+		新建空文件夹，比如命名 python_api_demo
+		进入文件夹，右键打开终端 / CMD/PowerShell
+
+	二、创建虚拟环境（必做，隔离依赖）
+		# 创建虚拟环境
+		python -m venv venv
+		# 激活虚拟环境
+		venv\Scripts\activate
+		
+	三、安装项目依赖
+		pip install fastapi uvicorn
+		# 保存依赖到文件
+		pip freeze > requirements.txt
+		
+	四、项目目录结构（标准）
+	五、编写项目代码
+
+	六、本地运行项目
+		方式 1：终端命令运行
+		uvicorn main:app --reload
+		方式 2：直接运行 py 文件
+		python main.py
+2、大模型和rag库
+	pip install ollama chromadb langchain langchain-community langchain-core pydantic fastapi uvicorn python-dotenv
+	ollama 调用本地 Ollama 大模型（必须）
+	chromadb 本地向量数据库，存 RAG 文档（必须）
+	langchain	把 大模型 + 向量库 串起来做 RAG（核心框架）
+	langchain-community 提供 Ollama + Chroma 对接支持
+	langchain-core LangChain 基础工具
+	pydantic 数据格式校验
+	fastapi uvicorn  做 API 接口
+	python-dotenv 管理配置文件
+
+	pip install  chromadb langchain langchain-community langchain-core pydantic  python-dotenv
+
+ 
+
